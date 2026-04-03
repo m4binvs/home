@@ -4,6 +4,10 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  // Relative paths so the built site works on GitHub Pages project URLs
+  // (e.g. https://user.github.io/repo/) and when opened from /docs on a branch.
+  base: './',
+
   plugins: [
     // The React and Tailwind plugins are both required for Make, even if
     // Tailwind is not being actively used – do not remove them
